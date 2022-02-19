@@ -20,37 +20,37 @@
       <!-- Searchbar with cancel button shown on focus -->
       <ion-searchbar show-cancel-button="focus" value="Via Ionic 18, Bolzano"></ion-searchbar>
 
-      <ion-card>
-        <ion-img :src="image"></ion-img>
+      <ion-list>
+        <ion-card  v-for="car in cars" :key="car.id">
+          <ion-img :src="image"></ion-img>
 
-        <ion-card-header>
-          <ion-card-subtitle>Via Ionic 18, Bolzano</ion-card-subtitle>
-          <ion-card-title>.0008 ETH/Hr</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-row>
-            <ion-col size="6" size-sm>
-              Spaces available: 
-            </ion-col>
-            <ion-col size="6" size-sm>
-              25 slots
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="6" size-sm>
-              Distance to Venue:
-            </ion-col>
-            <ion-col size="6" size-sm>
-              3 mins
-            </ion-col>
-          </ion-row>
-
-         
-          <ion-button fill="solid">View Car Park</ion-button>
+          <ion-card-header>
+            <ion-card-subtitle>{{car.streetName}}</ion-card-subtitle>
+            <ion-card-title>.0008 ETH/Hr</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="6" size-sm>
+                Spaces available: 
+              </ion-col>
+              <ion-col size="6" size-sm>
+                {{car.spaceAvailable}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-sm>
+                Distance to Venue:
+              </ion-col>
+              <ion-col size="6" size-sm>
+                {{car.distance}}
+              </ion-col>
+            </ion-row>
           
-        </ion-card-content>
-      </ion-card>
-      
+            <ion-button fill="solid">View Car Park</ion-button>
+            
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
 
       
       
@@ -65,6 +65,7 @@
 import { defineComponent, computed } from 'vue';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonSearchbar,
 IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonImg} from '@ionic/vue';
+import carsData from "../parkingSpaces.json";
 
 
 export default defineComponent({
@@ -77,6 +78,12 @@ export default defineComponent({
     return {
       image,
     }
-  }
+  },
+  data() {
+    return {
+      cars: carsData,
+    };
+  },
+
 });
 </script>

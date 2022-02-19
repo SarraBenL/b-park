@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "streetName" : "Via Rosmini",
+        "number" : "3",
+        "city" : "Bolzano",
+        "spaceAvailable": 2,
+        "distance": 4,  
+        "ownerid" : 120   
+    },
+    {
+        "id": 2,
+        "streetName" : "Via Cassa di Risparmio",
+        "number" : "1",
+        "city" : "Bolzano",
+        "spaceAvailable": 1,
+        "distance": 7,  
+        "ownerid" : 121       
+    },
+    {
+        "id": 3,
+        "streetName" : "Via Dante",
+        "number" : "5",
+        "city" : "Bolzano",
+        "spaceAvailable": 1,
+        "distance": 3,  
+        "ownerid" : 122  
+    }
+  ]
+  
