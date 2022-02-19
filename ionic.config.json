@@ -1,0 +1,8 @@
+{
+  "name": "B-Park",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "5e67e88a"
+}
