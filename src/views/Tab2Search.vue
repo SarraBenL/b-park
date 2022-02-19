@@ -18,7 +18,7 @@
 
 
       <!-- Searchbar with cancel button shown on focus -->
-      <ion-searchbar show-cancel-button="focus" value="Via Ionic 18, Bolzano"></ion-searchbar>
+      <ion-searchbar show-cancel-button="focus" value="Via Ionic, Bolzano"></ion-searchbar>
 
       <ion-list>
         <ion-card  v-for="car in cars" :key="car.id">
@@ -26,7 +26,7 @@
 
           <ion-card-header>
             <ion-card-subtitle>{{car.streetName}}</ion-card-subtitle>
-            <ion-card-title>.0008 ETH/Hr</ion-card-title>
+            <ion-card-title>{{car.eth}} ETH/Hr</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <ion-row>
@@ -46,7 +46,7 @@
               </ion-col>
             </ion-row>
           
-            <ion-button fill="solid">View Car Park</ion-button>
+            <ion-button expand="block" color="primary">View Car Park</ion-button>
             
           </ion-card-content>
         </ion-card>
