@@ -51,24 +51,73 @@
                     
             </ion-row>
 
+          <div :style="{textAlign : 'center', paddingTop: '16px'}">
+          <!-- <ion-button @click="prevSlide" :disabled="disablePrevBtn" expand="block" color="dark">prev</ion-button> -->
+            <ion-button @click="nextSlide" :disabled="disableNextBtn" expand="block" color="primary">Book Space</ion-button>
+          </div>
 
+          </ion-grid>
+
+
+
+        </ion-slide>
+        <ion-slide>
+          <ion-text color="dark">
+            <h1>Slide 2</h1>
+            <h1>Space Successfully Booked</h1>
+            <p>Your payment transaction has been successful. Your parking space has been reserved.</p>
+            
+            <p align="center"><ion-img :src="imageSuccesfulBooking" /></p>
+            <div :style="{textAlign : 'center', paddingTop: '106px'}">
+              <ion-button @click="nextSlide" :disabled="disableNextBtn" expand="block" color="primary">View Booking Details</ion-button>
+              <ion-button href="/tabs/tabSearch" expand="block" color="dark"> Go back to Home Screen </ion-button>
+              
+            </div>
+          </ion-text>
+        </ion-slide>
+        <ion-slide>
+
+          <ion-grid>
+            <ion-text color="dark">
+              <h1>Slide 3</h1>
+              <h2>Booking details</h2>
+            </ion-text>
+            <ion-row>
+              <ion-col size="6" size-sm>
+                Check-in Time:
+              </ion-col>
+              <ion-col size="6" size-sm>
+                11am read value
+              </ion-col>
+                    
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-sm>
+                Check-out Time:
+              </ion-col>
+              <ion-col size="6" size-sm>
+                5pm read value
+              </ion-col>          
+            </ion-row>
+            <ion-row>
+              <ion-col size="6" size-sm>
+                Specifications:
+              </ion-col>
+              <ion-col size="6" size-sm>
+                None read value
+              </ion-col>          
+            </ion-row>
+
+            <div :style="{textAlign : 'center', paddingTop: '106px'}">
+              <ion-button href="/tabs/tabSearch" expand="block" color="dark"> Go back to Home Screen </ion-button>  
+            </div>
 
           </ion-grid>
 
 
         </ion-slide>
-        <ion-slide>
-          <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
-          <h1>Slide 3</h1>
-        </ion-slide>
       </ion-slides>
 
-      <div :style="{textAlign : 'center', paddingTop: '16px'}">
-        <ion-button @click="prevSlide" :disabled="disablePrevBtn" expand="block" color="dark">prev</ion-button>
-        <ion-button @click="nextSlide" :disabled="disableNextBtn" expand="block" color="primary">Book Space</ion-button>
-      </div>
     </ion-content>
 
 
@@ -79,13 +128,13 @@
 
 <script lang="ts">
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonSlides, IonSlide,
-IonItem, IonLabel, IonRange, IonDatetime, IonToggle} from '@ionic/vue';
-import { defineComponent, onMounted, ref } from 'vue';
+IonItem, IonLabel, IonRange, IonDatetime, IonToggle, IonImg} from '@ionic/vue';
+import { defineComponent, onMounted, ref, computed } from 'vue';
 
 export default defineComponent({
   name: "SimpleModal",
   components: { IonContent, IonHeader, IonTitle, IonToolbar, IonSlides, IonSlide,
-  IonItem, IonLabel, IonRange, IonDatetime, IonToggle },
+  IonItem, IonLabel, IonRange, IonDatetime, IonToggle, IonImg },
   
   props: {
     title: { type: String, default: 'Super Modal' },
@@ -107,6 +156,10 @@ export default defineComponent({
       allowTouchMove: false
     };
 
+    // for slide 2 SuccesfulBooking
+    const imageSuccesfulBooking = computed(() => require('../../resources/green-tick-circle.png'))
+
+    //SLIDES button
     onMounted(()=>{
       console.log(mySlides.value);
     });
@@ -135,8 +188,9 @@ export default defineComponent({
     return { 
       // properties
       slideOpts, mySlides, disablePrevBtn, disableNextBtn,
-      // functions
-      prevSlide, nextSlide, slideChanged } // exposed methods
+      // functions  (exposed methods)
+      prevSlide, nextSlide, slideChanged,
+      imageSuccesfulBooking}
   },
 
 // for the RANGE
@@ -166,8 +220,12 @@ export default defineComponent({
 
 <style scoped>
 ion-slide {
-  height: 700px;
+  height: 800px;
   background-color: #313149;
+}
+ion-img{
+  height:250px;
+  width: 250px;
 }
 </style>
 
