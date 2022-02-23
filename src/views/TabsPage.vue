@@ -3,17 +3,17 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tabExtend" href="/tabs/extend">
+        <ion-tab-button tab="tabExtend" href="/tabs/TabExtend">
           <ion-icon :icon="time" />
           <ion-label>Extend</ion-label>
         </ion-tab-button>
           
-        <ion-tab-button tab="tabSearch" href="/tabs/search">
+        <ion-tab-button tab="tabSearch" href="/tabs/TabSearch">
           <ion-icon :icon="navigate" />
           <ion-label>Search</ion-label>
         </ion-tab-button>
         
-        <ion-tab-button tab="tabPublish" href="/tabs/publish">
+        <ion-tab-button tab="tabPublish" href="/tabs/TabPublish">
           <ion-icon :icon="add" />
           <ion-label>Publish</ion-label>
         </ion-tab-button>

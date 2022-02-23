@@ -49,9 +49,6 @@
             
             <ion-button @click="openModal" expand="block" color="primary">View Car Park</ion-button>
 
-            
-
-
           </ion-card-content>
         </ion-card>
       </ion-list>
@@ -79,20 +76,16 @@ export default defineComponent({
                 IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, 
                 IonImg},
   setup() {
-  const image = computed(() => require('../../resources/parkinglot.jpeg'))
+    const image = computed(() => require('../../resources/parkinglot.jpeg'))
 
-    return { image, }
-  },
+      return { image, }
+    },
   data() {
     return {
       cars: carsData, // returns cards data from json file
-    };
-  },
-  dataModal() {
-    return {
       isOpen: false,
-      modal: null,
-    }
+      modal: null, 
+    };
   },
   methods: {
     /** called when the modal is closed */

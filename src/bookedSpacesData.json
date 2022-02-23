@@ -1,0 +1,21 @@
+[
+    {
+        "id": 23,
+        "streetName" : "Via Rosmini 3, Bolzano",
+        "eth": 0.0008,
+        "startTime": "2021-09-02T18:25:43-05:00"
+    },
+    {
+        "id": 24,
+        "streetName" : "Via Cassa di Risparmio 1, Bolzano",
+        "eth": 0.0006,
+        "startTime": "2021-09-03T18:25:43-05:00"   
+    },
+    {
+        "id": 25,
+        "streetName" : "Via Dante 5, Bolzano",
+        "eth": 0.0007,
+        "startTime": "2021-09-04T18:25:43-05:00" 
+    }
+  ]
+  
