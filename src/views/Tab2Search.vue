@@ -85,7 +85,7 @@ export default defineComponent({
   },
   data() {
     return {
-      cars: carsData,
+      cars: carsData, // returns cards data from json file
     };
   },
   dataModal() {
