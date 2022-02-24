@@ -77,7 +77,6 @@ export default defineComponent({
                 IonImg},
   setup() {
     const image = computed(() => require('../../resources/parkinglot.jpeg'))
-
       return { image, }
     },
   data() {
