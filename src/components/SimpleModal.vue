@@ -227,6 +227,10 @@ ion-img{
   height:250px;
   width: 250px;
 }
+ion-grid{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 </style>
 
 

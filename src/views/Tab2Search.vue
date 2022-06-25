@@ -53,9 +53,7 @@
         </ion-card>
       </ion-list>
 
-      
-      
-      
+
 
       
     </ion-content>
@@ -79,9 +77,12 @@ export default defineComponent({
     const image = computed(() => require('../../resources/parkinglot.jpeg'))
       return { image, }
     },
+    
   data() {
+    let publishedCars = localStorage.storedData;
     return {
       cars: carsData, // returns cards data from json file
+      carsPublished: publishedCars, // returns cards data from json file
       isOpen: false,
       modal: null, 
     };
