@@ -130,6 +130,7 @@
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonSlides, IonSlide,
 IonItem, IonLabel, IonRange, IonDatetime, IonToggle, IonImg} from '@ionic/vue';
 import { defineComponent, onMounted, ref, computed } from 'vue';
+declare function myMethod(): any;
 
 export default defineComponent({
   name: "SimpleModal",
@@ -162,6 +163,11 @@ export default defineComponent({
     //SLIDES button
     onMounted(()=>{
       console.log(mySlides.value);
+      console.log("ciao ciao qua mettiamo web 3");
+      myMethod();
+
+
+
     });
 
     // when slide changes, enable and disable appropriate buttons
